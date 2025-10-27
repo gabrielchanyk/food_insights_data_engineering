@@ -1,0 +1,88 @@
+{
+  "schema_version": "v1.0",
+  "data_source": "MealDash",
+  "description": "Schema definitions for MealDash daily data feeds: revenue, transactions, customer feedback, and menu.",
+  "datasets": {
+    "revenue": {
+      "description": "Daily aggregated revenue data per store and region.",
+      "columns": [
+        { "name": "store_id", "type": "string", "required": true },
+        { "name": "region", "type": "string", "required": false },
+        { "name": "total_orders", "type": "integer", "required": true },
+        { "name": "total_revenue", "type": "float", "required": true },
+        { "name": "delivery_fees", "type": "float", "required": false },
+        { "name": "promotions_applied", "type": "float", "required": false },
+        { "name": "report_date", "type": "date", "required": true }
+      ]
+    },
+    "transactions": {
+      "description": "Detailed transaction-level data for orders.",
+      "columns": [
+        { "name": "order_id", "type": "string", "required": true },
+        { "name": "customer_id", "type": "string", "required": true },
+        { "name": "store_id", "type": "string", "required": true },
+        { "name": "order_datetime", "type": "datetime", "required": true },
+        {
+          "name": "payment_method",
+          "type": "string",
+          "required": false,
+          "allowed_values": ["CREDIT_CARD", "APPLE_PAY", "CASH", "OTHER"]
+        },
+        { "name": "order_total", "type": "float", "required": true },
+        { "name": "delivery_fee", "type": "float", "required": false },
+        { "name": "discount_amount", "type": "float", "required": false },
+        {
+          "name": "order_status",
+          "type": "string",
+          "required": true,
+          "allowed_values": ["PLACED", "DELIVERED", "CANCELLED", "REFUNDED"]
+        },
+        { "name": "item_id", "type": "string", "required": true },
+        { "name": "item_name", "type": "string", "required": true },
+        { "name": "quantity", "type": "integer", "required": true },
+        { "name": "unit_price", "type": "float", "required": true },
+        { "name": "category", "type": "string", "required": false }
+      ]
+    },
+    "customer_feedback": {
+      "description": "Customer ratings and feedback per order.",
+      "columns": [
+        { "name": "feedback_id", "type": "string", "required": true },
+        { "name": "order_id", "type": "string", "required": true },
+        { "name": "customer_id", "type": "string", "required": false },
+        {
+          "name": "rating",
+          "type": "integer",
+          "required": true,
+          "min_value": 1,
+          "max_value": 5
+        },
+        { "name": "comments", "type": "string", "required": false },
+        { "name": "feedback_timestamp", "type": "datetime", "required": true }
+      ]
+    },
+    "menu": {
+      "description": "Menu item details per store.",
+      "columns": [
+        { "name": "menu_id", "type": "string", "required": true },
+        { "name": "store_id", "type": "string", "required": true },
+        { "name": "item_name", "type": "string", "required": true },
+        {
+          "name": "category",
+          "type": "string",
+          "required": true,
+          "allowed_values": [
+            "Mains",
+            "Sides",
+            "Appetizers",
+            "Desserts",
+            "Beverages"
+          ]
+        },
+        { "name": "price", "type": "float", "required": true },
+        { "name": "is_available", "type": "boolean", "required": true },
+        { "name": "last_updated", "type": "datetime", "required": true }
+      ]
+    }
+  }
+}

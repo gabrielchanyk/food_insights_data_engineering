@@ -1,5 +1,5 @@
 from airflow import DAG
-from airflow.providers.amazon.aws.operators.glue import AwsGlueJobOperator
+from airflow.providers.amazon.aws.operators.batch import AwsBatchOperator
 from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from airflow.utils.dates import days_ago
 from datetime import timedelta
@@ -13,7 +13,7 @@ default_args = {
 }
 
 dag = DAG(
-    'main_glue_pipeline',
+    'main_batch_pipeline',
     default_args=default_args,
     schedule_interval=None,
     catchup=False,
@@ -22,13 +22,18 @@ dag = DAG(
 base_path = os.path.dirname(__file__)
 steps_yaml_path = os.path.join(base_path, 'maps/steps.yaml')
 
-# Glue job
-glue_job = AwsGlueJobOperator(
-    task_id='trigger_glue_job',
-    job_name='data_processing_glue_job',
-    script_location='s3://my-glue-scripts/data_processing.py',
-    region_name='us-east-1',
-    iam_role_name='AWSGlueServiceRole',
+# AWS Batch job
+batch_job = AwsBatchOperator(
+    task_id='trigger_batch_job',
+    job_name='data_processing_batch_job',
+    job_queue='my-batch-queue',       # replace with your Batch job queue name
+    job_definition='data_processing_job_def:1',  # replace with your job definition name and revision
+    overrides={                        # optional, e.g., environment variables
+        'environment': [
+            {'name': 'S3_SCRIPT_PATH', 'value': 's3://my-batch-scripts/data_processing.py'},
+        ]
+    },
+    aws_conn_id='aws_default',
     wait_for_completion=True,
     dag=dag,
 )
@@ -47,4 +52,4 @@ trigger_athena_dag = TriggerDagRunOperator(
     dag=dag,
 )
 
-glue_job >> trigger_athena_dag
+batch_job >> trigger_athena_dag

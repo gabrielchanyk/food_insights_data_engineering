@@ -7,8 +7,8 @@
         <mxCell id="a0vSVEjOP1mqH1hVoTn6-1" value="Customer&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;customer_id&lt;/div&gt;&lt;div&gt;name&lt;/div&gt;&lt;div&gt;email&lt;/div&gt;&lt;div&gt;phone_number&lt;/div&gt;&lt;div&gt;signup_date&lt;/div&gt;&lt;div&gt;address&lt;/div&gt;&lt;div&gt;gender&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="40" y="285" width="140" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="a0vSVEjOP1mqH1hVoTn6-2" value="Order&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;order_id&lt;/div&gt;&lt;div&gt;menu_id&lt;/div&gt;&lt;div&gt;revenue_id&lt;/div&gt;&lt;div&gt;quantity&lt;/div&gt;&lt;div&gt;price&lt;/div&gt;&lt;div&gt;promoiton_id&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="280" y="290" width="140" height="170" as="geometry" />
+        <mxCell id="a0vSVEjOP1mqH1hVoTn6-2" value="Order&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;order_id&lt;/div&gt;&lt;div&gt;menu_id&lt;/div&gt;&lt;div&gt;revenue_id&lt;/div&gt;&lt;div&gt;quantity&lt;/div&gt;&lt;div&gt;price&lt;/div&gt;&lt;div&gt;taxes&lt;/div&gt;&lt;div&gt;tip&lt;/div&gt;&lt;div&gt;total_order_cost&lt;/div&gt;&lt;div&gt;promoiton_id&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="290" width="140" height="170" as="geometry" />
         </mxCell>
         <mxCell id="a0vSVEjOP1mqH1hVoTn6-3" value="Revenue&lt;div&gt;&lt;br&gt;&lt;div&gt;order_id&lt;/div&gt;&lt;div&gt;amount&lt;/div&gt;&lt;div&gt;platform_fee&lt;/div&gt;&lt;div&gt;restarant_payout&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="540" y="490" width="140" height="120" as="geometry" />

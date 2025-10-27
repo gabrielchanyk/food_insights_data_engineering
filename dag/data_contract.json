@@ -1,0 +1,20 @@
+{
+  "data_source_name": "MealDash",
+  "data_owner": "mealdash_csv@gmail.com",
+  "contract_version": "v1.0",
+  "effective_date": "2025-10-30",
+  "data_refresh_frequency": "daily",
+  "delivery_method": "CSV + YAML files",
+  "connection_information": {
+    "protocol": "SFTP",
+    "authentication_methods": ["passwordless", "username_password"],
+    "notes": "Preferred method: SSH key-based (passwordless).",
+    "host": "sftp.mealdash.com",
+    "username": "ftp_user",
+    "password_secret_name": "ftp-password-secret",
+    "file_path": "/path/to/data.csv",
+    "s3_destination": "s3://my-bucket/ftp_data/"
+  },
+  "data_schema_reference": "order_schema.json",
+  "description": "Daily delivery of MealDash order, revenue, feedback, and menu data to InsightEats. Delivered via secure SFTP as CSV and YAML metadata files."
+}
