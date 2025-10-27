@@ -1,0 +1,10 @@
+{
+  "orders": [
+    { "name": "order_id", "datatype": "bigint", "required": true },
+    { "name": "menu_id", "datatype": "bigint", "required": true },
+    { "name": "revenue_id", "datatype": "bigint", "required": true },
+    { "name": "quantity", "datatype": "integer", "required": true },
+    { "name": "price", "datatype": "double", "required": true },
+    { "name": "promotion_id", "datatype": "bigint", "required": false }
+  ]
+}
