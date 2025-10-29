@@ -1,0 +1,58 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
+  <diagram name="Page-1" id="EKzYkAsjs5zhhNh1B5Qw">
+    <mxGraphModel dx="2066" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-7" value="&lt;font style=&quot;color: rgb(0, 0, 255);&quot;&gt;Meal Dash Ingest -&amp;gt; Clean DAG&lt;/font&gt;" style="outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;strokeColor=#3333FF;fillColor=none;verticalAlign=top;align=center;fontColor=#FF9900;dashed=0;spacingTop=3;" vertex="1" parent="1">
+          <mxGeometry x="270" y="60" width="170" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-1" value="Ingestion Technology&lt;div&gt;(AWS Batch)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-2" value="Transform Technoogy&lt;div&gt;(Athena DAG)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-4" value="Seperate Reusuable Modules" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="60" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-8" value="Ingestion Technology&lt;div&gt;(AWS Batch)&lt;/div&gt;&lt;div&gt;- params from data contract&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-9" value="Transform Technoogy&lt;div&gt;(Athena DAG)&lt;/div&gt;&lt;div&gt;- parms from json or yamls for sql to clean&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-10" value="&lt;font style=&quot;color: rgb(0, 0, 255);&quot;&gt;QuickBite Ingest -&amp;gt; Clean DAG&lt;/font&gt;" style="outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;strokeColor=#3333FF;fillColor=none;verticalAlign=top;align=center;fontColor=#FF9900;dashed=0;spacingTop=3;" vertex="1" parent="1">
+          <mxGeometry x="270" y="410" width="170" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-12" value="Transform Technoogy&lt;div&gt;(Athena DAG)&lt;/div&gt;&lt;div&gt;- parms from json or yamls for sql to clean&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-16" value="Ingestion Technology&lt;div&gt;(AWS Fargate)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-17" value="Ingestion Technology&lt;div&gt;(AWS Fargate)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-18" value="Gold Transform" style="outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;strokeColor=#FF9900;fillColor=none;verticalAlign=top;align=center;fontColor=#FF9900;dashed=0;spacingTop=3;" vertex="1" parent="1">
+          <mxGeometry x="530" y="220" width="370" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="G9xsp5ggBdmzGQKobxpk-19" target="G9xsp5ggBdmzGQKobxpk-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-19" value="&lt;font style=&quot;color: rgb(0, 0, 255);&quot;&gt;Meal Dash Ingest -&amp;gt; Clean DAG&lt;/font&gt;" style="outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;strokeColor=#3333FF;fillColor=none;verticalAlign=top;align=center;fontColor=#FF9900;dashed=0;spacingTop=3;" vertex="1" parent="1">
+          <mxGeometry x="570" y="280" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="G9xsp5ggBdmzGQKobxpk-20" target="G9xsp5ggBdmzGQKobxpk-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-20" value="&lt;font style=&quot;color: rgb(0, 0, 255);&quot;&gt;QuickBite Ingest -&amp;gt; Clean DAG&lt;/font&gt;" style="outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;strokeColor=#3333FF;fillColor=none;verticalAlign=top;align=center;fontColor=#FF9900;dashed=0;spacingTop=3;" vertex="1" parent="1">
+          <mxGeometry x="720" y="275" width="120" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="G9xsp5ggBdmzGQKobxpk-22" value="Transform Technoogy&lt;div&gt;(Athena DAG)&lt;/div&gt;&lt;div&gt;- gold transform logic&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="655" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

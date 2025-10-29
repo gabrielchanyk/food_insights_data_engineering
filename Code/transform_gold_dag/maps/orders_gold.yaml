@@ -1,0 +1,36 @@
+name: order
+jobs:
+  - destination_database: MealDash # Athena database
+    destination_table: orders # Athena table
+    output_location: s3://my-athena-query-results/insights/gold/orders/ # S3 path for query results
+    query: >
+      INSERT INTO insights.gold.orders
+      SELECT 
+        order_id,
+        menu_id,
+        revenue_id,
+        quantity,
+        price,
+        promotion_id
+        "mealdash" as source
+      FROM mealdash.expl.orders
+      union all
+      SELECT 
+        order_id,
+        menu_id,
+        revenue_id,
+        quantity,
+        price,
+        promotion_id
+        "quickbite" as source
+      FROM quickbite.expl.orders
+      union all
+      SELECT 
+        order_id,
+        menu_id,
+        revenue_id,
+        quantity,
+        price,
+        promotion_id
+        "foodnow" as source
+      FROM foodnow.expl.orders

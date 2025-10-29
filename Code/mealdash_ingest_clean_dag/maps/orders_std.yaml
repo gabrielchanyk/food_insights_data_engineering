@@ -1,0 +1,15 @@
+name: order
+jobs:
+  - destination_database: MealDash # Athena database
+    destination_table: orders # Athena table
+    output_location: s3://my-athena-query-results/mealdash/std/orders/ # S3 path for query results
+    query: >
+      INSERT INTO mealdash.std.orders
+      SELECT 
+        order_id,
+        menu_id,
+        revenue_id,
+        TRIM(CAST(quantity AS INTEGER)) AS quantity,
+        TRIM(CAST(price AS DECIMAL(10, 2))) AS price,
+        promotion_id
+      FROM mealdash.lnd.orders_source
