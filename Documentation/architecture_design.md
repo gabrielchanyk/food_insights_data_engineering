@@ -43,3 +43,5 @@ All courier platforms must contain, at minimum, the following data domains for p
 - **Menu and restaurant details**
 - **Delivery and courier tracking**
 - **Promotions and campaign data**
+
+[back to main](/README.md)

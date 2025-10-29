@@ -20,3 +20,5 @@ Focus on answering questions like: _Where are we losing money, and how can we ma
 Data Exploration -> Technology evaluation -> Data pipeline logic to clean data -> Business insights (AI empowered or human) -> Monitoring/Failure Scenarios
 
 Using AWS technologies
+
+[back to main](/README.md)
