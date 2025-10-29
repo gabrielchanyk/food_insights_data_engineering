@@ -44,4 +44,4 @@ All courier platforms must contain, at minimum, the following data domains for p
 - **Delivery and courier tracking**
 - **Promotions and campaign data**
 
-[back to main](/README.md)
+🔙 [Back to Main README](/README.md)

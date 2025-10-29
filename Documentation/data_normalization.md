@@ -41,4 +41,4 @@ JOIN order_items oi ON o.order_id = oi.order_id
 JOIN appetizers a ON oi.appetizer_name = a.name;
 ```
 
-[back to main](/README.md)
+🔙 [Back to Main README](/README.md)
